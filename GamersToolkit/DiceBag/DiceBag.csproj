@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProjectGuid>{1D2BC1F8-006B-4902-B721-8510DC274E63}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>DiceBag</RootNamespace>
     <AssemblyName>DiceBag</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -30,4 +30,33 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="_Factory\" />
+    <Folder Include="Dice\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dice\AbstractDie.cs" />
+    <Compile Include="Dice\D2.cs" />
+    <Compile Include="_Factory\DiceFactory.cs" />
+    <Compile Include="Dice\D3.cs" />
+    <Compile Include="Dice\D4.cs" />
+    <Compile Include="Dice\D5.cs" />
+    <Compile Include="Dice\D6.cs" />
+    <Compile Include="Dice\D8.cs" />
+    <Compile Include="Dice\D10.cs" />
+    <Compile Include="Dice\D12.cs" />
+    <Compile Include="Dice\D14.cs" />
+    <Compile Include="Dice\D16.cs" />
+    <Compile Include="Dice\D20.cs" />
+    <Compile Include="Dice\D24.cs" />
+    <Compile Include="Dice\D30.cs" />
+    <Compile Include="Dice\D100.cs" />
+    <Compile Include="DiceBag.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Interfaces\Interfaces.csproj">
+      <Project>{A661809E-1AAC-497B-8118-7A22290C6BA8}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

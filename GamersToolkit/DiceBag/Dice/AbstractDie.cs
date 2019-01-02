@@ -1,7 +1,7 @@
 ﻿using System;
 using Interfaces.Dice;
 
-namespace DiceBag.Dice
+namespace ManualRandomNumberGenerators.Dice
 {
 	abstract class AbstractDie : IDice
 	{

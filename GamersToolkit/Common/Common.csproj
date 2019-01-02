@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A661809E-1AAC-497B-8118-7A22290C6BA8}</ProjectGuid>
+    <ProjectGuid>{E1B4884D-DD3D-4E83-B554-2D8F3703DBBB}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Interfaces</RootNamespace>
-    <AssemblyName>Interfaces</AssemblyName>
+    <RootNamespace>Common</RootNamespace>
+    <AssemblyName>Common</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -32,22 +32,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DiceBag\IDice.cs" />
-    <Compile Include="DiceBag\IDiceBag.cs" />
-    <Compile Include="DiceBag\Enums\DiceType.cs" />
-    <Compile Include="GameSystems\IGameSystem.cs" />
-    <Compile Include="Characters\ICharacter.cs" />
-    <Compile Include="GameSystems\GameSystems.cs" />
-    <Compile Include="Characters\ISkill.cs" />
-    <Compile Include="DiceBag\IRollResult.cs" />
-    <Compile Include="Characters\IModifier.cs" />
-    <Compile Include="Characters\ValidAction.cs" />
+    <Compile Include="BaseClasses\Characters\AbstractModifier.cs" />
+    <Compile Include="BaseClasses\Characters\AbstractSkill.cs" />
+    <Compile Include="Builders\DiceBagBuilder.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Folder Include="DiceBag\" />
-    <Folder Include="DiceBag\Enums\" />
-    <Folder Include="GameSystems\" />
-    <Folder Include="Characters\" />
+    <Folder Include="BaseClasses\" />
+    <Folder Include="BaseClasses\Characters\" />
+    <Folder Include="Builders\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Interfaces\Interfaces.csproj">
+      <Project>{A661809E-1AAC-497B-8118-7A22290C6BA8}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DiceBag\ManualRandomNumberGenerators.csproj">
+      <Project>{1D2BC1F8-006B-4902-B721-8510DC274E63}</Project>
+      <Name>ManualRandomNumberGenerators</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

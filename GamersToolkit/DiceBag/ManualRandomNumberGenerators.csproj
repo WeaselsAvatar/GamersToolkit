@@ -5,8 +5,8 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProjectGuid>{1D2BC1F8-006B-4902-B721-8510DC274E63}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>DiceBag</RootNamespace>
-    <AssemblyName>DiceBag</AssemblyName>
+    <RootNamespace>ManualRandomNumberGenerators</RootNamespace>
+    <AssemblyName>ManualRandomNumberGenerators</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -52,6 +52,7 @@
     <Compile Include="Dice\D30.cs" />
     <Compile Include="Dice\D100.cs" />
     <Compile Include="DiceBag.cs" />
+    <Compile Include="Dice\RollResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Interfaces\Interfaces.csproj">

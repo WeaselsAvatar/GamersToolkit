@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DiceBag.Dice
+namespace ManualRandomNumberGenerators.Dice
 {
 	class D5 : AbstractDie
 	{

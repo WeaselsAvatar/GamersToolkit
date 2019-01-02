@@ -2,7 +2,7 @@
 using Interfaces.Dice;
 using System.Collections.Generic;
 
-namespace DiceBag.Dice
+namespace ManualRandomNumberGenerators.Dice
 {
 	internal class DiceFactory
 	{

@@ -19,10 +19,10 @@ namespace LamentationsOfTheFlamePrincess.Character
 		{
 			int numberOfDice = Value < 6 ? 1 : 2;
 
-			IEnumerable<int> rollResult = DiceBag.GrabDice(DiceType.d6, numberOfDice).Select (t => t.Roll);
+			IEnumerable<int> rollResult = DiceBag.GrabDice(DiceType.d6, numberOfDice).Select (t => t.Roll);		
 
 			bool rollSuccess = Value < 6 ? 
-				rollResult.First() + modifiers.Where(t => t.IsValid).Sum(t => t.Value) - Value <= 0 : 
+				Value + modifiers.Where(t => t.IsValid).Sum(t => t.Value) - rollResult.First() >= 0 : 
 				rollResult.All(t => t < 6);		
 
 			return new RollResult (

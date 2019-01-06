@@ -4,7 +4,7 @@ namespace Interfaces.Characters.Skills
 {
 	public interface IModifier
 	{
-		bool IsValid { get; }
+		bool IsValidFor (ValidAction action);
 		int Value { get; }
 	}
 }

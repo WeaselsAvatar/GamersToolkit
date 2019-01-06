@@ -32,9 +32,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="BaseClasses\Characters\AbstractModifier.cs" />
     <Compile Include="BaseClasses\Characters\AbstractSkill.cs" />
     <Compile Include="Builders\DiceBagBuilder.cs" />
+    <Compile Include="BaseClasses\Characters\Modifier.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

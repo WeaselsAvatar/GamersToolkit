@@ -33,6 +33,7 @@
   <ItemGroup>
     <Folder Include="_Factory\" />
     <Folder Include="Dice\" />
+    <Folder Include="InternalInterfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dice\AbstractDie.cs" />
@@ -53,6 +54,8 @@
     <Compile Include="Dice\D100.cs" />
     <Compile Include="DiceBag.cs" />
     <Compile Include="Dice\RollResult.cs" />
+    <Compile Include="InternalInterfaces\ISingletonRandomizer.cs" />
+    <Compile Include="SingletonRandomizer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Interfaces\Interfaces.csproj">

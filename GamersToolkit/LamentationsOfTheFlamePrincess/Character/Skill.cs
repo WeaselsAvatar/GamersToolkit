@@ -17,13 +17,12 @@ namespace LamentationsOfTheFlamePrincess.Character
 
 		public override IRollResult Roll (IEnumerable<IModifier> modifiers)
 		{
-			int numberOfDice = Value < 6 ? 1 : 2;
+			int modifiedSkillValue = Value + modifiers.Where (t => t.IsValid).Sum (t => t.Value);
+			int numberOfDice = modifiedSkillValue < 6 ? 1 : 2;
 
 			IEnumerable<int> rollResult = DiceBag.GrabDice(DiceType.d6, numberOfDice).Select (t => t.Roll);		
 
-			bool rollSuccess = Value < 6 ? 
-				Value + modifiers.Where(t => t.IsValid).Sum(t => t.Value) - rollResult.First() >= 0 : 
-				rollResult.All(t => t < 6);		
+			bool rollSuccess = modifiedSkillValue < 6 ? modifiedSkillValue - rollResult.First() >= 0 : rollResult.All(t => t < 6);		
 
 			return new RollResult (
 				rollResult, 

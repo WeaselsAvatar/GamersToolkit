@@ -5,7 +5,7 @@ namespace ManualRandomNumberGenerators.Dice
 	class D4 : AbstractDie
 	{
 		protected override int MinValue => 1;
-		protected override int MaxValue => 5;	
+		protected override int MaxValue => 4;	
 	}
 }
 
